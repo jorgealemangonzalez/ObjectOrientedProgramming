@@ -17,7 +17,7 @@ public class Stock {
     private double price;
     private Currency currency;
     
-    public void Stock( Book bk, int cop , double pric, Currency curr ){
+    public Stock( Book bk, int cop , double pric, Currency curr ){
         book = bk;
         copies = cop;
         price = pric;
