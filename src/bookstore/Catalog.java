@@ -5,6 +5,7 @@
  */
 package bookstore;
 
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.util.Currency;
 import java.util.Date;
@@ -38,4 +39,12 @@ public class Catalog extends BookCollection {
         }
         //SE SUPONE QUE TENEMOS QUE AÑADIR COSAS AL collection de bookCollection mediantes las clases que heredan de ella
     };
+=======
+/**
+ *
+ * @author guini
+ */
+public class Catalog {
+    
+>>>>>>> b6a005407671cdfeb28f182543c0bc98e2eecfd9
 }
