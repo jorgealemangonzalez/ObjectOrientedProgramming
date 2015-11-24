@@ -11,7 +11,7 @@ import java.util.Currency;
  *
  * @author jorge aleman
  */
-public class Stock {
+public class Stock implements StockInterface{
     private Book book;
     private int copies;
     private double price;
