@@ -72,7 +72,6 @@ public class BookStore extends javax.swing.JFrame {
                 jButton1ActionPerformed( evt );
             }
         });
-
         jComboBox2.setModel( new javax.swing.DefaultComboBoxModel< String >( copyChoices() ) );
 
         jLabel3.setText( "" );
@@ -213,6 +212,8 @@ public class BookStore extends javax.swing.JFrame {
 private String[] copyChoices() {
 	String booktitle = ( String )jComboBox1.getSelectedItem();
 	int copies = catalog.numberOfCopies( booktitle );
+        //System.out.println(copies);
+        //System.out.println(booktitle);
 	String[] result = new String[copies];
 	for ( int i = 1; i <= copies; ++i )
 		result[i-1] = "" + i;

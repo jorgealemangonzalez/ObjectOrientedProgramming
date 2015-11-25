@@ -17,7 +17,7 @@ public class Stock implements StockInterface{
     private double price;
     private Currency currency;
     
-    public Stock( Book bk, int cop , double pric, Currency curr ){
+    Stock( Book bk, int cop , double pric, Currency curr ){
         book = bk;
         copies = cop;
         price = pric;

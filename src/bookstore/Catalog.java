@@ -23,13 +23,15 @@ public class Catalog extends BookCollection {
         {
             Date date = new Date();
             try { date = new SimpleDateFormat().parse( row[2] ); } // Date instance
-            catch( Exception e ) {System.out.print(e); }
+            catch( Exception e ) {System.out.println(e); }
             long isbn = Long.parseLong( row[4] ); // convert to long
             double price = Double.parseDouble( row[5] ); // convert to double
             Currency currency = Currency.getInstance( row[6] ); // Currency instance
             int copies = Integer.parseInt( row[7] ); // convert to int
+            //System.out.println("Catalog cop "+copies);
             Book b = new Book(row[0],row[1],date,row[3],isbn);
             StockInterface s = new Stock(b,copies,price,currency);
+            //System.out.println("Stock : "+s.numberOfCopies());
             collection.add(s);
         }
         //SE SUPONE QUE TENEMOS QUE AÑADIR COSAS AL collection de bookCollection mediantes las clases que heredan de ella

@@ -31,6 +31,7 @@ public abstract class BookCollection implements BookCollectionInterface {
 
 	public StockInterface getStock( String booktitle ) {
 		for ( StockInterface stock : collection ) {
+                    //System.out.println("--"+stock.getBooktitle()+ stock.numberOfCopies());
 			if ( booktitle.equals( stock.getBooktitle() ) )
 				return stock;
 		}
@@ -38,7 +39,9 @@ public abstract class BookCollection implements BookCollectionInterface {
 	}
 
 	public int numberOfCopies( String booktitle ) {
+                //System.out.println(booktitle);
 		StockInterface stock = getStock( booktitle );
+                //System.out.println(stock.numberOfCopies());
 		return stock.numberOfCopies();
 	}
 
