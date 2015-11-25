@@ -29,7 +29,7 @@ public abstract class BookCollection implements BookCollectionInterface {
 		return result;
 	}
 
-	private StockInterface getStock( String booktitle ) {
+	public StockInterface getStock( String booktitle ) {
 		for ( StockInterface stock : collection ) {
 			if ( booktitle.equals( stock.getBooktitle() ) )
 				return stock;
