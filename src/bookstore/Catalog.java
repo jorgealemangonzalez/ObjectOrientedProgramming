@@ -18,8 +18,6 @@ import java.util.LinkedList;
 public class Catalog extends BookCollection { 
     
     Catalog(){
-        LinkedList< Stock > allStock;
-        allStock = new LinkedList < > ();
         LinkedList< String[] > list = BookCollection.readCatalog("books.xml");
         for(String[] row: list)
         {
