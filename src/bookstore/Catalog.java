@@ -5,7 +5,7 @@
  */
 package bookstore;
 
-<<<<<<< HEAD
+
 import java.text.SimpleDateFormat;
 import java.util.Currency;
 import java.util.Date;
@@ -18,8 +18,6 @@ import java.util.LinkedList;
 public class Catalog extends BookCollection { 
     
     Catalog(){
-        LinkedList< Book > books;
-        books = new LinkedList < > ();
         LinkedList< Stock > allStock;
         allStock = new LinkedList < > ();
         LinkedList< String[] > list = BookCollection.readCatalog("books.xml");
@@ -33,18 +31,9 @@ public class Catalog extends BookCollection {
             Currency currency = Currency.getInstance( row[6] ); // Currency instance
             int copies = Integer.parseInt( row[7] ); // convert to int
             Book b = new Book(row[0],row[1],date,row[3],isbn);
-            books.add(b);
             Stock s = new Stock(b,copies,price,currency);
-            allStock.add(s);
+            collection.add(s);
         }
         //SE SUPONE QUE TENEMOS QUE AÑADIR COSAS AL collection de bookCollection mediantes las clases que heredan de ella
     };
-=======
-/**
- *
- * @author guini
- */
-public class Catalog {
-    
->>>>>>> b6a005407671cdfeb28f182543c0bc98e2eecfd9
 }
