@@ -20,7 +20,9 @@ public class TestStore {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Catalog c = new Catalog();
+        BookCollectionInterface c = new Catalog();
+        ShoppingCartInterface s = new ShopingCart(c);
+        BookStore store = new BookStore(c,s);
     }
     
 }

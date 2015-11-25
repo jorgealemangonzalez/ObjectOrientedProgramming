@@ -45,6 +45,6 @@ public class Stock implements StockInterface{
     }
     
     public double totalPrice(){
-        return price;
+        return price*(double)copies;
     }
 }
