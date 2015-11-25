@@ -22,7 +22,10 @@ public class Catalog extends BookCollection {
         for(String[] row: list)
         {
             Date date = new Date();
-            try { date = new SimpleDateFormat().parse( row[2] ); } // Date instance
+            try { 
+                SimpleDateFormat parserSDF=new SimpleDateFormat("yyyy/mm/dd");
+                date = parserSDF.parse(row[2]);
+            }
             catch( Exception e ) {System.out.println(e); }
             long isbn = Long.parseLong( row[4] ); // convert to long
             double price = Double.parseDouble( row[5] ); // convert to double
