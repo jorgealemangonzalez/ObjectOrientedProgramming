@@ -6,6 +6,7 @@
 package bookstore;
 
 import java.util.Currency;
+import java.util.HashSet;
 
 /**
  *
@@ -17,11 +18,11 @@ public class ShoppingCart extends BookCollection implements ShoppingCartInterfac
     
     public ShoppingCart( Catalog catinit ){
         catalog = catinit;
-        String s[] = catalog.booktitles();
-        for( int i = 0 ; i < s.length ; ++i){
-            Stock st = (Stock)catalog.getStock(s[i]); //hemos puesto publica el getStock para poder coger todos los Stocks 
-            Stock stock = new Stock( st.getBook(), 0 , st.totalPrice()/st.numberOfCopies(),Currency.getInstance("EUR") );
-            collection.add(stock);
+        HashSet< StockInterface > col = catalog.getCollection();
+        for ( StockInterface stock : col ) {
+            Stock s;
+            s = new Stock(stock.getBook(), 0 , stock.totalPrice()/stock.numberOfCopies(), stock.getCurrency() );
+            collection.add(s);
         }
     }
     

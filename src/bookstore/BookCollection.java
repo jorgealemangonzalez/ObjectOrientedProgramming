@@ -29,19 +29,20 @@ public abstract class BookCollection implements BookCollectionInterface {
 		return result;
 	}
 
-	public StockInterface getStock( String booktitle ) {
+	private StockInterface getStock( String booktitle ) {
 		for ( StockInterface stock : collection ) {
-                    //System.out.println("--"+stock.getBooktitle()+ stock.numberOfCopies());
 			if ( booktitle.equals( stock.getBooktitle() ) )
 				return stock;
 		}
 		return null;
 	}
-
+        public HashSet< StockInterface > getCollection(){
+            return collection;
+        }
 	public int numberOfCopies( String booktitle ) {
-                //System.out.println(booktitle);
+                System.out.println(booktitle);
 		StockInterface stock = getStock( booktitle );
-                //System.out.println(stock.numberOfCopies());
+                System.out.println(stock.numberOfCopies());
 		return stock.numberOfCopies();
 	}
 

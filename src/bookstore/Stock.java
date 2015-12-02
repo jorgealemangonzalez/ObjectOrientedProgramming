@@ -17,6 +17,7 @@ public class Stock implements StockInterface{
     private double price;
     private Currency currency;
     
+    
     Stock( Book bk, int cop , double pric, Currency curr ){
         book = bk;
         copies = cop;
@@ -26,6 +27,10 @@ public class Stock implements StockInterface{
     
     public Book getBook(){
         return book;
+    }
+    
+    public Currency getCurrency(){
+        return currency;
     }
     
     public String getBooktitle(){
