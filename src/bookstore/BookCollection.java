@@ -40,9 +40,9 @@ public abstract class BookCollection implements BookCollectionInterface {
             return collection;
         }
 	public int numberOfCopies( String booktitle ) {
-                System.out.println(booktitle);
+                //System.out.println(booktitle);
 		StockInterface stock = getStock( booktitle );
-                System.out.println(stock.numberOfCopies());
+                //System.out.println(stock.numberOfCopies());
 		return stock.numberOfCopies();
 	}
 

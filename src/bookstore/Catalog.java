@@ -37,6 +37,5 @@ public class Catalog extends BookCollection {
             //System.out.println("Stock : "+s.numberOfCopies());
             collection.add(s);
         }
-        //SE SUPONE QUE TENEMOS QUE AÑADIR COSAS AL collection de bookCollection mediantes las clases que heredan de ella
     };
 }

@@ -25,7 +25,7 @@ public class Stock implements StockInterface{
         currency = curr;
     }
     
-    public Book getBook(){
+    public Book getBook(){ //Con este getter ya podemos obtener toda la info del libro
         return book;
     }
     
